@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="format-detection" content="telephone=no" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      
+   <title>App Taller I</title>
+
+   <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.2.min.css">   
+   <script src="jquery/jquery.js"></script>
+   <script src="jquery.mobile/jquery.mobile-1.4.2.min.js"></script>
+   <script src="js/map.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> 
+         
+   <script type="text/javascript" charset="utf-8" src="utils/appUtils.js"></script>
+   <script type="text/javascript" charset="utf-8" src="utils/require.js"></script>
+   <script type="text/javascript" charset="utf-8" src="utils/number.utils.js"></script>
+   <script type="text/javascript" charset="utf-8" src="index.js"></script>
+
+   <style type="text/css">
+      body, html {
+         background-color: #000;
+         padding: 0;
+         margin: 0;
+         border: 0;
+      }
+
+      .ui-mobile, .ui-mobile body {
+         height: 100%;
+         width: 100%;
+      }
+
+         .ui-mobile body #index-page {
+            background-color: #000;
+         }
+   </style>
+
+   <script type="text/javascript">
+
+      $.mobile.changePage.defaults.changeHash = false;
+
+      jQuery(function () {
+         var fondoImg = jQuery('#beginImage');
+         fondoImg.attr('width', jQuery(window).width() + 'px');
+         fondoImg.attr('height', jQuery(window).height() + 'px');
+         indexApp.init();
+      });
+   </script>
+
+</head>
+<body>
+   <div id="index-page" data-role="page" data-theme="b">
+       <img id="beginImage" src="img/fondo.png" style="width:100%; height:100%"  />
+   </div>
+</body>
+</html>
